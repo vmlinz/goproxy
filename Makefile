@@ -39,12 +39,12 @@ SOURCES += $(REPO)/httpproxy/filters/autoproxy/gfwlist.txt
 
 ifeq ($(GOOS), windows)
 	SOURCES += $(REPO)/assets/gui/goproxy-gui.exe
-	SOURCES += $(REPO)/assets/startup/addto-startup.vbs
+	SOURCES += $(REPO)/assets/scripts/addto-startup.vbs
 else ifeq ($(GOOS), darwin)
 	SOURCES += $(REPO)/assets/gui/goproxy-osx.command
 else
 	SOURCES += $(REPO)/assets/gui/goproxy-gtk.py
-	SOURCES += $(REPO)/assets/startup/goproxy.sh
+	SOURCES += $(REPO)/assets/scripts/goproxy.sh
 endif
 
 LDFLAGS = -X main.version=r$(REVSION)
